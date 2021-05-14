@@ -23,7 +23,7 @@ import io.github.jbytheway.rideottawa.utils.HttpUtils;
 
 public class OcTranspoApi {
     private static final String TAG = "OcTranspoApi";
-    private static final String URL_ROOT = "https://api.octranspo1.com/v1.3/";
+    private static final String URL_ROOT = "https://api.octranspo1.com/v2.0/";
     private static final String NEXT_TRIPS_URL = URL_ROOT + "GetNextTripsForStop";
     private static final String ROUTE_SUMMARY_URL = URL_ROOT + "GetRouteSummaryForStop";
 
