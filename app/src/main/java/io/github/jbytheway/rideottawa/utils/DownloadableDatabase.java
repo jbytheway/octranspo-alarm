@@ -12,6 +12,7 @@ import android.util.Log;
 import com.google.common.io.ByteStreams;
 import com.google.common.io.CharStreams;
 import com.google.common.io.Files;
+import com.koushikdutta.async.future.Future;
 import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.HeadersCallback;
 import com.koushikdutta.ion.HeadersResponse;
@@ -29,7 +30,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.concurrent.CancellationException;
-import java.util.concurrent.Future;
 import java.util.zip.GZIPInputStream;
 
 import io.github.jbytheway.rideottawa.R;
@@ -209,8 +209,8 @@ public abstract class DownloadableDatabase extends SQLiteOpenHelper {
                         }
                     })
                     .write(temporaryFile)
-                    .withResponse()
-                    .setCallback(new FutureCallback<Response<File>>() {
+                    .withResponse();
+            mDownload.setCallback(new FutureCallback<Response<File>>() {
                         @Override
                         public void onCompleted(Exception e, Response<File> result) {
                             Integer code = null;

@@ -35,6 +35,6 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.4'
     //implementation 'org.apache.commons:commons-io:1.3.2'
     implementation 'net.danlew:android.joda:2.9.2'
-    implementation 'com.koushikdutta.ion:ion:2.1.7'
+    implementation 'com.koushikdutta.ion:ion:3.1.0'
     implementation 'com.google.guava:guava:28.0-android'
 }
